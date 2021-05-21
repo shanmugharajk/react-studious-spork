@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter should render Counter component 1`] = `
+<div>
+  <div
+    class="Counter__container"
+  >
+    <span
+      class="Counter__clicks-lbl"
+      data-testid="counter-lbl"
+    >
+      Clicks 
+      0
+    </span>
+    <div
+      class="Counter__footer-container"
+    >
+      <button
+        class="Counter__btn"
+      >
+        Increment
+      </button>
+      <button
+        class="Counter__btn"
+      >
+        Decrement
+      </button>
+    </div>
+  </div>
+</div>
+`;
