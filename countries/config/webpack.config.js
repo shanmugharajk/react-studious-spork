@@ -53,7 +53,7 @@ module.exports = {
         test: /\.css$/,
         // style-loader injectss css into DOM.
         // css-loader interprets @import and url() like import/require() and will resolve them
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
 
       // For images
