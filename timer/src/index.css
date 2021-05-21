@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Roboto-Bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("~/assets/fonts/roboto-v27-latin-500.woff2") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Box sizing */
+/* See: https://css-tricks.com/box-sizing/#article-header-id-6 */
+html {
+  box-sizing: border-box;
+}
+
+html *,
+html *:before,
+html *:after {
+  box-sizing: inherit;
+}

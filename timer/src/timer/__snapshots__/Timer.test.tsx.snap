@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timer should render Timer component 1`] = `
+<div>
+  <div
+    class="Timer__container"
+  >
+    <span
+      class="Timer__text"
+    >
+      06:22:39 PM
+    </span>
+  </div>
+</div>
+`;

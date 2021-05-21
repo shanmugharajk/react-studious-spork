@@ -1,0 +1,13 @@
+.Timer__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Timer__text {
+  font-family: "Roboto-Bold";
+  font-size: 84px;
+  color: #37474f;
+}
