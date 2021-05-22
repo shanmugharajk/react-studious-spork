@@ -5,6 +5,9 @@ export interface ILanguage {
   rtl: boolean;
 }
 
+export interface ICountry {
+  country: ICountryInfo;
+}
 export interface ICountryInfo {
   name: string;
   code: string;
