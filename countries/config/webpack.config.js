@@ -10,10 +10,10 @@ const isProd = () => env("production");
 const ifProd = (t, f) => (isProd() ? t : f);
 
 // == paths ==
-const dist = path.resolve(__dirname, "..", "./dist");
 const context = path.resolve(__dirname, "..");
 const configFile = "tsconfig.json";
 const main = process.env.MAIN_ENTRY || "./src/index.tsx";
+const dist = path.resolve(__dirname, "./dist");
 const template = "./public/index.html";
 const favicon = "./public/favicon.ico";
 
@@ -31,7 +31,7 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
     alias: {
-      "~": ".",
+      "~": path.resolve(__dirname, "..", "./src"),
     },
   },
 

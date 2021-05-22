@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { ApolloProvider } from "@apollo/client/react";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
-import { Countries } from "~/countries";
+import { CountriesInfo } from "~/countries-info";
 
 const client = new ApolloClient({
   uri: "https://countries.trevorblades.com/",
@@ -14,7 +14,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Countries />
+      <CountriesInfo />
     </ApolloProvider>
   );
 }

@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* components */
+.input-txt-minimal {
+  @apply border-0 border-b-2 border-gray-300 px-0 py-2
+  placeholder-gray-500 placeholder-opacity-50
+  focus:outline-thin focus:ring-0 focus:border-indigo-600;
+}
+
+/* containers */
+.paper {
+  @apply bg-white rounded-xl shadow-md mb-4;
+}
