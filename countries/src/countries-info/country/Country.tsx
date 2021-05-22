@@ -1,17 +1,24 @@
-import * as React from "react";
+import React from "react";
 import { useLazyQuery } from "@apollo/client";
 
+import type { ICountryQueryResult, ICountry } from "~/countries-info/types";
 import { debounce } from "~/utils";
 
 import { CountryCard } from "./CountryCard";
 import { COUNTRIES_INFO_BY_ID } from "./queries";
-import type { ICountry, ICountryInfo } from "./types";
 
 export const Country: React.FunctionComponent = () => {
-  const [countryInfo, setCountryInfo] = React.useState<ICountryInfo>();
+  const [countryInfo, setCountryInfo] = React.useState<ICountry>();
+  const [apiError, setApiError] = React.useState<string>();
 
   const [fetchData, { loading, data, error }] =
-    useLazyQuery<ICountry, { code: string }>(COUNTRIES_INFO_BY_ID);
+    useLazyQuery<ICountryQueryResult, { code: string }>(COUNTRIES_INFO_BY_ID);
+
+  React.useEffect(() => {
+    if (error) {
+      setApiError(`${error?.name} - ${error?.message}`);
+    }
+  }, []);
 
   React.useEffect(() => {
     setCountryInfo(data?.country);
@@ -22,13 +29,14 @@ export const Country: React.FunctionComponent = () => {
       if (code?.length > 0) {
         fetchData({ variables: { code } });
       }
-    }, 1000),
+    }, 500),
     [],
   );
 
   const handleCountryCodeChange = React.useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
       setCountryInfo(undefined);
+      setApiError(undefined);
       getCountryInfo(event.target.value);
     },
     [],
@@ -55,11 +63,7 @@ export const Country: React.FunctionComponent = () => {
       />
 
       <div className="h-96 mt-5">
-        <CountryCard
-          error={error?.message}
-          data={countryInfo}
-          loading={loading}
-        />
+        <CountryCard error={apiError} data={countryInfo} loading={loading} />
       </div>
     </div>
   );

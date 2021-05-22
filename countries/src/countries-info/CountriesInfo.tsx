@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import { Country } from "~/country";
-import { Continent } from "~/continent";
+import { Country } from "~/countries-info/country";
+import { Continent } from "~/countries-info/continent";
 
 export const CountriesInfo: React.FunctionComponent = () => {
   return (

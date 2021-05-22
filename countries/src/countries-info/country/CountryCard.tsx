@@ -1,11 +1,12 @@
 import * as React from "react";
 
+import { Alert, Info } from "~/components";
 import { isNull } from "~/utils";
 
-import type { ICountryInfo, ILanguage } from "./types";
+import type { ICountry } from "~/countries-info/types";
 
 interface IProps {
-  data?: ICountryInfo;
+  data?: ICountry;
   error?: string;
   loading: boolean;
 }
@@ -16,28 +17,16 @@ export const CountryCard: React.FunctionComponent<IProps> = ({
   loading,
 }) => {
   if (error) {
-    return (
-      <div>
-        <span className="text-red-400">{error}</span>
-      </div>
-    );
+    return <Alert>{error}</Alert>;
   }
 
   if (loading) {
-    return (
-      <div>
-        <span className="text-gray-400">Loading....</span>
-      </div>
-    );
+    return <Info>Loading....</Info>;
   }
 
   // result from api will set this as null.
   if (isNull(data)) {
-    return (
-      <div>
-        <span className="text-gray-400">No results found</span>
-      </div>
-    );
+    return <Info>No results found</Info>;
   }
 
   // We clear when user changes the input with undefined to immediately clear the
