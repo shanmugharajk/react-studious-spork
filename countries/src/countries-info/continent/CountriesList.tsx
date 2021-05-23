@@ -7,7 +7,7 @@ import { isNull } from "~/utils";
 interface IProps {
   countries?: ICountry[] | null;
   error?: string;
-  loading: boolean;
+  loading?: boolean;
 }
 
 export const CountriesList: React.FunctionComponent<IProps> = ({
@@ -37,7 +37,7 @@ export const CountriesList: React.FunctionComponent<IProps> = ({
   return (
     <ul className="mt-5 p-4 space-y-3 text-gray-600 text-sm h-64 rounded-lg border border-gray-300 overflow-auto">
       {countries.map((country) => (
-        <li key={country.code}>
+        <li data-testid="country-list-item" key={country.code}>
           <span className="inline-block mr-5">{country.emoji}</span>
           <span>{country.name}</span>
         </li>

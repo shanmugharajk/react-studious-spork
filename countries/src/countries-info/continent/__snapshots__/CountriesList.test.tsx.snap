@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountriesList should render 'No results found' message 1`] = `
+<div>
+  <div
+    class="mt-5 p-5 bg-gray-50 border border-gray-300 rounded-lg"
+  >
+    <span
+      class="text-gray-500"
+    >
+      No results found
+    </span>
+  </div>
+</div>
+`;
+
+exports[`CountriesList should render 'loading...' message 1`] = `
+<div>
+  <div
+    class="mt-5 p-5 bg-gray-50 border border-gray-300 rounded-lg"
+  >
+    <span
+      class="text-gray-500"
+    >
+      Loading....
+    </span>
+  </div>
+</div>
+`;
+
+exports[`CountriesList should render CountriesList 1`] = `
+<div>
+  <ul
+    class="mt-5 p-4 space-y-3 text-gray-600 text-sm h-64 rounded-lg border border-gray-300 overflow-auto"
+  >
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇦🇲
+      </span>
+      <span>
+        Armenia
+      </span>
+    </li>
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇧🇭
+      </span>
+      <span>
+        Bahrain
+      </span>
+    </li>
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇧🇳
+      </span>
+      <span>
+        Brunei
+      </span>
+    </li>
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇧🇹
+      </span>
+      <span>
+        Bhutan
+      </span>
+    </li>
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇱🇦
+      </span>
+      <span>
+        Laos
+      </span>
+    </li>
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇱🇧
+      </span>
+      <span>
+        Lebanon
+      </span>
+    </li>
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇲🇴
+      </span>
+      <span>
+        Macao
+      </span>
+    </li>
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇳🇵
+      </span>
+      <span>
+        Nepal
+      </span>
+    </li>
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇴🇲
+      </span>
+      <span>
+        Oman
+      </span>
+    </li>
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇶🇦
+      </span>
+      <span>
+        Qatar
+      </span>
+    </li>
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇹🇷
+      </span>
+      <span>
+        Turkey
+      </span>
+    </li>
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇹🇼
+      </span>
+      <span>
+        Taiwan
+      </span>
+    </li>
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇻🇳
+      </span>
+      <span>
+        Vietnam
+      </span>
+    </li>
+    <li
+      data-testid="country-list-item"
+    >
+      <span
+        class="inline-block mr-5"
+      >
+        🇾🇪
+      </span>
+      <span>
+        Yemen
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`CountriesList should render error message 1`] = `
+<div>
+  <div
+    class="mt-5 p-3 bg-red-50 border border-red-500 rounded-lg"
+  >
+    <span
+      class="text-red-400"
+    >
+      An error occurred
+    </span>
+  </div>
+</div>
+`;

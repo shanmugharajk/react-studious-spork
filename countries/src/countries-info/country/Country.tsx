@@ -18,7 +18,7 @@ export const Country: React.FunctionComponent = () => {
     if (error) {
       setApiError(`${error?.name} - ${error?.message}`);
     }
-  }, []);
+  }, [error]);
 
   React.useEffect(() => {
     setCountryInfo(data?.country);
@@ -52,6 +52,7 @@ export const Country: React.FunctionComponent = () => {
       </label>
 
       <input
+        data-testid="country-code-txt"
         autoComplete="off"
         className="input-txt-minimal"
         id="country-code"
@@ -63,7 +64,7 @@ export const Country: React.FunctionComponent = () => {
       />
 
       <div className="h-96 mt-5">
-        <CountryCard error={apiError} data={countryInfo} loading={loading} />
+        <CountryCard error={apiError} country={countryInfo} loading={loading} />
       </div>
     </div>
   );

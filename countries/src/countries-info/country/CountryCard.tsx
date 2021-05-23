@@ -6,13 +6,13 @@ import { isNull } from "~/utils";
 import type { ICountry } from "~/countries-info/types";
 
 interface IProps {
-  data?: ICountry;
+  country?: ICountry | null;
   error?: string;
-  loading: boolean;
+  loading?: boolean;
 }
 
 export const CountryCard: React.FunctionComponent<IProps> = ({
-  data,
+  country,
   error,
   loading,
 }) => {
@@ -25,17 +25,17 @@ export const CountryCard: React.FunctionComponent<IProps> = ({
   }
 
   // result from api will set this as null.
-  if (isNull(data)) {
+  if (isNull(country)) {
     return <Info>No results found</Info>;
   }
 
   // We clear when user changes the input with undefined to immediately clear the
   // previous details shown to avoid confusion.
-  if (!data) {
+  if (!country) {
     return null;
   }
 
-  const { name, code, currency, languages } = data;
+  const { name, code, currency, languages } = country;
 
   return (
     <div className="mt-5 p-4 space-y-3 text-gray-600 text-sm border border-gray-300 rounded-lg">

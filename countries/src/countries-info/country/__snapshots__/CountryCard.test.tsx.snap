@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountryCard should render 'No results found' message 1`] = `
+<div>
+  <div
+    class="mt-5 p-5 bg-gray-50 border border-gray-300 rounded-lg"
+  >
+    <span
+      class="text-gray-500"
+    >
+      No results found
+    </span>
+  </div>
+</div>
+`;
+
+exports[`CountryCard should render 'loading...' message 1`] = `
+<div>
+  <div
+    class="mt-5 p-5 bg-gray-50 border border-gray-300 rounded-lg"
+  >
+    <span
+      class="text-gray-500"
+    >
+      Loading....
+    </span>
+  </div>
+</div>
+`;
+
+exports[`CountryCard should render CountryCard 1`] = `
+<div>
+  <div
+    class="mt-5 p-4 space-y-3 text-gray-600 text-sm border border-gray-300 rounded-lg"
+  >
+    <div>
+      Name: 
+      India
+    </div>
+    <div>
+      Code: 
+      IN
+    </div>
+    <div>
+      Currency: 
+      INR
+    </div>
+    <div>
+      Languages: 
+      Hindi, English
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CountryCard should render error message 1`] = `
+<div>
+  <div
+    class="mt-5 p-3 bg-red-50 border border-red-500 rounded-lg"
+  >
+    <span
+      class="text-red-400"
+    >
+      An error occurred
+    </span>
+  </div>
+</div>
+`;

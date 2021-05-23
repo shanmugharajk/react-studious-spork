@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert should render Alert 1`] = `
+<div>
+  <div
+    class="mt-5 p-3 bg-red-50 border border-red-500 rounded-lg"
+  >
+    <span
+      class="text-red-400"
+    >
+      Error
+    </span>
+  </div>
+</div>
+`;

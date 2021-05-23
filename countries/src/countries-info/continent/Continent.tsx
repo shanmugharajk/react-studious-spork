@@ -1,12 +1,11 @@
-import React from 'react';
-import { useLazyQuery } from '@apollo/client';
+import React from "react";
+import { useLazyQuery } from "@apollo/client";
 
-import { ICountry, IContinentQueryResult } from '~/countries-info/types';
-import { debounce } from '~/utils';
+import type { ICountry, IContinentQueryResult } from "~/countries-info/types";
+import { debounce, isNull } from "~/utils";
 
-import { GET_COUNTRIES_CONTINENT_CODE } from './queries';
-import { CountriesList } from './CountriesList';
-import { isNull } from '../../utils/object';
+import { GET_COUNTRIES_CONTINENT_CODE } from "./queries";
+import { CountriesList } from "./CountriesList";
 
 export const Continent: React.FunctionComponent = () => {
   const [countries, setCountries] = React.useState<ICountry[] | null>();
@@ -59,6 +58,7 @@ export const Continent: React.FunctionComponent = () => {
       </label>
 
       <input
+        data-testid="continent-code-txt"
         className="input-txt-minimal"
         id="continent-code"
         name="continentCode"
